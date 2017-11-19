@@ -1,30 +1,22 @@
 var express = require("express")
+var strf = require("strftime")
 
 var app = express()
 app.listen(5000)
 
-app.get("/\\d+:unix", timestamper)
-app.get("/*:utc", timestamper)
+app.get("/:unix(\\d+)", timestamper)
+app.get("/:utc", timestamper)
 
 function timestamper(req, res) {
-    console.log(req.params.unix)
-    console.log(req.params.utc)
+    var time;
     if (typeof(req.params.unix) == "string") {
-        console.log("got here")
-        time = new Date(Number(req.params.time))
+        time = new Date(Number(req.params.unix))
     } else {
-        time = new Date(req.params.time)
+        time = new Date(req.params.utc)
     }
-     
-    console.log(time)
     var timestamp = {
         "unix": time.getTime(),
-        "natural":
-            time.getUTCMonth() +
-            " " +
-            time.getDate() +
-            ", " +
-            time.getFullYear()
+        "natural": strf("%B %d, %Y", time)
     }
     res.end(JSON.stringify(timestamp))
 }

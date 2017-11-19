@@ -1,4 +1,4 @@
 # timestamp-microservice
-A timestamp microservice for my FCC Backend Developer Certicification.
+A timestamp microservice project developed for the FreeCodeCamp backend developer certicification.
 
 https://github.com/nkolatsis/timestamp-microservice.git
