@@ -1,0 +1,22 @@
+{
+  "name": "timestamp-microservice",
+  "version": "0.0.1",
+  "description": "A timestamp microservice project developed for the FreeCodeCamp backend developer certicification.",
+  "main": "timestamp-ms.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkolatsis/timestamp-microservice.git"
+  },
+  "author": "Nicholas Kolatsis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkolatsis/timestamp-microservice/issues"
+  },
+  "homepage": "https://github.com/nkolatsis/timestamp-microservice#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
